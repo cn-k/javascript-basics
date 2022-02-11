@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id= "tuval" width="640" height="480" style="border:1px solid;">
+            Bu browser canvas desteklemiyor.
+        </canvas>
+        <script>
+            var tuval = document.getElementById("tuval");
+            var cizim = tuval.getContext("2d");
+            cizim.beginPath;
+            cizim.moveTo(0,0);
+            cizim.lineTo(300, 300);
+            cizim.lineTo(400,300);
+            cizim.moveTo(400,0);
+            cizim.lineTo(500,100);
+            cizim.stroke();
+            function tiklama(e){
+                cizim.beginPath();
+                cizim.arc(e.x,e.y,50,0,2*Math.PI)
+                cizim.stroke();
+            }
+            tuval.addEventListener('click',tiklama);
+        </script>
+    </body>
+</html>

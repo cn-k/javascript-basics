@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FOR</title>
+    </head>
+<body>
+        <table border ="1"><tr><td>Sayi</td><td>Faktoriyel</td></tr>
+            <script>
+                function faktoriyel(sayi){
+                   if(sayi == 1)return 1
+                   return sayi * faktoriyel( sayi-1)
+                }
+                for(var i=1;i<5;i++){
+                    document.write("<tr><td>"+i+"</td><td>"+faktoriyel(i)+"</td></tr>")
+                }
+            </script>
+            </table>
+</body>
+</html>
